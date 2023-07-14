@@ -1,0 +1,69 @@
+<?php
+
+namespace {{ NAMESPACE }}\{{ LAYER_NAME }}\Facades;
+
+use Exception;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Facade;
+
+use App\ApiResponse;
+use {{ NAMESPACE }}\{{ LAYER_NAME }}\I{{ CLASS_NAME }};
+use {{ NAMESPACE }}\Domain\{{ CLASS_NAME }}Service;
+
+// Esto es a modo de ejemplo, pueden modificarse, eliminarse o agregarse
+// use {{ NAMESPACE }}}}\Infrastructure\Validations\{{ CLASS_NAME }}StoreValidation;
+// use {{ NAMESPACE }}}}\Infrastructure\Validations\{{ CLASS_NAME }}UpdateValidation;
+// use {{ NAMESPACE }}}}\Infrastructure\Validations\{{ CLASS_NAME }}GetValidation;
+// use {{ NAMESPACE }}}}\Infrastructure\Validations\{{ CLASS_NAME }}DeleteValidation;
+
+class {{ CLASS_NAME }} extends Facade implements I{{ CLASS_NAME }} // Podés implementar otra interface aparte de esta poniendo una coma y el nombre de la interfaz
+{
+    protected static function getFacadeAccessor()
+    {
+        return '{{ FACADE_ACCESSOR }}';
+    }
+
+    function store(Request $request)
+    {
+        try {
+            // Tu codigo va aquí papilo
+            // comunicate con la capa de Aplicacion en el servicio respectivo
+            // no me hagas renegar
+        } catch (Exception $ex) {
+            // ApiResponse server error
+        }
+    }
+
+    function update(Request $request)
+    {
+        try {
+            // Tu codigo va aquí papilo
+            // comunicate con la capa de Aplicacion en el servicio respectivo
+            // no me hagas renegar
+        } catch (Exception $ex) {
+            // ApiResponse server error
+        }
+    }
+
+    function get($par = null)
+    {
+        try {
+            // Tu codigo va aquí papilo
+            // comunicate con la capa de Aplicacion en el servicio respectivo
+            // no me hagas renegar
+        } catch (Exception $ex) {
+            // ApiResponse server error
+        }
+    }
+
+    function delete()
+    {
+        try {
+            // Tu codigo va aquí papilo
+            // comunicate con la capa de Aplicacion en el servicio respectivo
+            // no me hagas renegar
+        } catch (Exception $ex) {
+            // ApiResponse server error
+        }
+    }
+}

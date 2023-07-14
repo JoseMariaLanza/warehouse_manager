@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "5fc89b73-3e02-43c4-8b03-988fc6205927",
+		"name": "SMP JWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16014727"
+	},
+	"item": [
+		{
+			"name": "Shifts Module",
+			"item": [
+				{
+					"name": "Get all shifts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jwt_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6WyJhIiwiYiIsImNvb3JkaW5hdG9yIl0sInBlcm1pc3Npb25zIjpbImNyZWF0ZSBzaGlmdHMiXSwic2hpZnRfZGF0ZSI6IjIwMjItMDgtMSIsImlhdCI6MTY2MTcyNzQ1NX0.amBOppyg0XZLU8rmWHIaCup4gX3LENjgy8HiiG-R60A\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/shifts/v1/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shifts",
+								"v1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account Module v1",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jwt_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vcm9uZGFuZ2FAbWFpbC5jb20iLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiaWF0IjoxNjYxNjczMzAyfQ.LR2KRRlNrttiUzt36pSiO79WwCzx6cFhXu_ch-_51S4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/account/v1/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jwt_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicGVwaXRvIiwiZW1haWwiOiJtb3JvbmRhbmdhQG1haWwuY29tIiwicGFzc3dvcmQiOiJwYXNzd29yZCIsImlhdCI6MTY2MTY2NjIzMX0.b8J9H6RcTk-891JD426xgm8QDHvxSPH9VJOUH3g8N3s\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/account/v1/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/account/v1/user-profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"v1",
+								"user-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/account/v1/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"v1",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "165|3OrWv1M3RPuZEtatbWAQqntBUPjE9drbGzvUx34J",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

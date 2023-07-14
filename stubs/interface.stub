@@ -1,0 +1,17 @@
+<?php
+
+namespace {{ NAMESPACE }}\{{ LAYER_NAME }};
+
+use Illuminate\Http\Request;
+
+
+interface I{{ CLASS_NAME }}
+{
+    public function get($par = null);
+
+    public function store(Request $request);
+
+    public function update(Request $request);
+
+    public function delete();
+}

@@ -1,0 +1,478 @@
+{
+	"info": {
+		"_postman_id": "d6a6b9b9-4698-4016-8699-0fa8bc697871",
+		"name": "SMP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17737532"
+	},
+	"item": [
+		{
+			"name": "Shifts Module",
+			"item": [
+				{
+					"name": "Get all shifts",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientCode\": \"30000697\",\r\n    \"storage\": \"011\",\r\n    \"roles\": [\"coordinator\"]\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/shifts/v1/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shifts",
+								"v1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get filtered shifts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cliente_id\": 11,\r\n  \"turno_id\": 2, \r\n  \"roles\": [\"coordinator\"]\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/shifts/v1/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shifts",
+								"v1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create shift",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 11,\r\n    \"status\": \"pending\",\r\n    \"driver_identification\": \"66262332\",\r\n    \"shift_date\": \"2022-09-13\",\r\n    \"start_time\": \"08:00:00\",\r\n    \"finish_time\": \"08:00:00\",\r\n    \"init_weight\": 20000,\r\n    \"final_weight\": 27000,\r\n    \"remit\": 5,\r\n    \"assigned_shipment_street\": \"1\",\r\n    \"shift_type\": \"vibro-pressed\", \r\n    \"vip_shift\": 0,\r\n    \"state_province\": \"tucuman\",\r\n    \"shift_dat:e\": \"2022-09-13\",\r\n    \"roles\": [\"coordinator\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/shifts/v1/create-shift",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shifts",
+								"v1",
+								"create-shift"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update shift",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"status\": \"ready to pick up\",\r\n    \"roles\": [\"coordinator\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/shifts/v1/update-shift",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shifts",
+								"v1",
+								"update-shift"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account Module v1",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"sanford.vidal@example.org\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/account/v1/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jwt_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicGVwaXRvIiwiZW1haWwiOiJtb3JvbmRhbmdhQG1haWwuY29tIiwicGFzc3dvcmQiOiJwYXNzd29yZCIsImlhdCI6MTY2MTY2NjIzMX0.b8J9H6RcTk-891JD426xgm8QDHvxSPH9VJOUH3g8N3s\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/account/v1/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/account/v1/user-profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"v1",
+								"user-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/account/v1/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"v1",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "SAP API",
+			"item": [
+				{
+					"name": "Get SAP Customer Data",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientCode\": \"30000697\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/sap/client/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sap",
+								"client",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get SAP Orders",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientCode\": \"30000697\",\r\n    \"storage\": \"011\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/sap/orders/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sap",
+								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get SAP Stock",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productCode\": \"3010000221\",\r\n    \"otherProductCode\": \"3010000002\",\r\n    \"storage\": \"011\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/sap/stock/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sap",
+								"stock",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get SAP Delivery Data (Interfaz de remitos)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otherClientCode\": \"30000697\",\r\n    \"clientCode\": \"30000187\",\r\n    \"storage\": \"011\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/sap/delivery/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sap",
+								"delivery",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "3|kAldsiSPebtcbgxAr0x4tzvWgPgcBLeQOuJuuJRW",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

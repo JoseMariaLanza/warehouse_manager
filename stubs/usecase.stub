@@ -1,0 +1,26 @@
+<?php
+
+namespace {{ NAMESPACE }}\{{ LAYER_NAME }}\{{ ENTITY }}UseCases;
+
+use Exception;
+use Illuminate\Http\Request;
+
+use App\ApiResponse;
+use Core\{{ MODULE_NAME }}\Domain\{{ CLASS_NAME }}Service;
+use Core\{{ MODULE_NAME }}\Infrastructure\Validations\{{ ENTITY }}\{{ ENTITY }}Validation;
+
+class {{ CLASS_NAME }}StoreUseCase
+{
+    static function store(Request $request)
+    {
+        try {
+            if (!{{ CLASS_NAME }}Validation::validateStore($request)) {
+                return ApiResponse::badRequest('HERE GOES YOUR CUSTOM ERROR!!.');
+            }
+
+            return {{ CLASS_NAME }}Service::store($request);
+        } catch (Exception $ex) {
+            return ApiResponse::serverError($ex->getMessage());
+        }
+    }
+}
