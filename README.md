@@ -136,7 +136,6 @@ Se creó una DB externa la cual cuenta con su coneccion, modelos, migraciones y 
 # > FINALMENTE SE DEBE AGREGAR LA SIGUIENTE LINE A LOS MODELOS CORRESPONDIENTES PARA QUE FUNCIONEN LAS CONSULTAS A LA DB
 > o bien agregar connection('core') en cada consulta, pero esto no es recomendable
 # > protected $connection= 'core';
-# ESTO ES MUCHO MUY IMPORTANTE!!!
 
 ## Arquitectura del proyecto
 
