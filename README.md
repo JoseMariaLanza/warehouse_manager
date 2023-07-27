@@ -1,4 +1,4 @@
-# Panel Autogestión Comercial
+# Warehouse admin
 ## _Self-Management Panel_
 
 SMP (Self-Management Panel) es la versión comercial del Panel Autogestión. La característica principal de éste es que se divide en módulos que pueden ser adquiridos de forma independiente unos de otros según el plan contratado, éstos son:
