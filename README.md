@@ -10,7 +10,7 @@ La característica principal de éste proyecto es que se divide en módulos que 
 - Claims (Módulo de Reclamos)
 - Orders (Módulo de Ordenes de compa)
 
-Los diagramas de la aplicación se pueden consultar [Aquí](https://github.com/JoseMariaLanza/warehouse_manager/blob/main/resources/docs/diagrams/html-docs/index.html)
+Los diagramas de la aplicación se pueden consultar [Aquí](https://github.com/JoseMariaLanza/warehouse_manager/blob/main/resources/docs/diagrams/html-docs/index.html) "!Importante: para visualizar los diagramas debe tener el proyecto en local."
 
 ## Levantando el proyecto
 
