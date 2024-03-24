@@ -1,16 +1,16 @@
 # Warehouse admin
-## _Self-Management Panel_
+## _Management Panel_
 
-SMP (Self-Management Panel) es la versión comercial del Panel Autogestión. La característica principal de éste es que se divide en módulos que pueden ser adquiridos de forma independiente unos de otros según el plan contratado, éstos son:
+La característica principal de éste proyecto es que se divide en módulos que pueden ser adquiridos de forma independiente unos de otros según el plan contratado, éstos son:
 
-- [Account (Módulo de cuentas de usuario)](https://gitlab.com/sitenso-comercial/smp-backend/-/tree/main/resources/docs/account)
-- [Shifts (Módulo de Turnos)](https://gitlab.com/sitenso-comercial/smp-backend/-/tree/main/resources/docs/shifts)
-- Warehouse (Módulo que contiene a Smart Warehouse expuesto como un servicio)
-- Documents (Módulo de Gestión Documental)
+- [Account (Módulo de cuentas de usuario)](https://github.com/JoseMariaLanza/warehouse_manager/tree/main/resources/docs/account) - Siempre disponible
+- [Shifts (Módulo de Turnos)](https://github.com/JoseMariaLanza/warehouse_manager/tree/main/resources/docs/shifts)
+- Warehouse (Módulo de Almacén)
+- Documents (Módulo de Gestión de documentos)
 - Claims (Módulo de Reclamos)
-- Orders (Módulo de Gestión de Pedidos)
+- Orders (Módulo de Ordenes de compa)
 
-Los diagramas de la aplicación se pueden consultar [Aquí](https://gitlab.com/jmlanza/smp-backend-own/-/blob/main/resources/docs/diagrams/html-docs/index.html)
+Los diagramas de la aplicación se pueden consultar [Aquí](https://github.com/JoseMariaLanza/warehouse_manager/blob/main/resources/docs/diagrams/html-docs/index.html)
 
 ## Levantando el proyecto
 
@@ -118,7 +118,7 @@ Para usar el sistema por defecto basta con modificar la conexión por defecto en
             'port' => env('DB_PORT', '3306'),
             ...
 ```
-> No olvidar crear la clase DatabaseSeeder dentre de seeders
+> No olvidar crear la clase DatabaseSeeder dentro de seeders
 
 ##### PASOS PARA ACTIVAR LA MIGRACION POR DEFECTO
 ###### PASO 1 - Descomentar .env
